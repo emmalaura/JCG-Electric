@@ -1,0 +1,118 @@
+/* Reset default margins and paddings */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background: #FFFFFF; /* Background: White */
+}
+
+h1 {
+    text-align: center;
+    color: #004C99; /* Heading color: Blue */
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+    background-color:white; /* Nav Bar Background: Dark Blue */
+    height: 80px; /* Fixed height for the navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar img {
+    height: 100%; /* Make the logo as tall as the navbar */
+    max-height: 100%; /* Ensure the logo doesn't exceed the navbar height */
+    margin: 0; /* Remove any margin around the logo */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color:black; /* Nav Bar Text: White */
+    text-decoration: none;
+    padding: 15px 20px; /* Increased padding for larger clickable area */
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-size: 18px; /* Larger font size */
+}
+
+.navbar a:hover {
+    background-color: #6699CC; /* Nav Bar Hover: Light Blue */
+}
+
+.navbar li {
+    margin: 0 15px;
+    float: left;
+}
+
+/* Reset default margins and paddings */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #FFFFFF; /* Background: White */
+}
+
+.contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f7f7f7; /* Light background color for the form */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    color: #004C99; /* Heading color: Blue */
+    margin-bottom: 20px;
+}
+
+.input-field, .textarea-field {
+    margin-bottom: 20px;
+}
+
+.input-field input, .textarea-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-field input:focus, .textarea-field textarea:focus {
+    border-color: #004C99; /* Blue border on focus */
+    outline: none;
+}
+
+.error-txt {
+    display: none; /* Hide error messages by default */
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #004C99; /* Button background color: Blue */
+    color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #003366; /* Darker blue on hover */
+}
