@@ -1,8 +1,8 @@
-/* Reset default margins and paddings */
+
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font: 'Roboto';
     min-height: 100vh;
     background: #FFFFFF; /* Background: White */
 }
@@ -12,21 +12,22 @@ h1 {
     color: #004C99; /* Heading color: Blue */
     font-family: 'Playfair Display', serif;
 }
-
+/* Navbar */
 .navbar {
-    background-color: white; /* Nav Bar Background */
+    background: linear-gradient(to right, #ffffff, #f0f0f0); /* Subtle gradient background */
     height: 80px; /* Fixed height for the navbar */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 0 20px; /* Padding for the navbar content */
 }
 
 .navbar img {
-    height: 80px; /* Set a specific height for the logo */
-    width: 150px;
-    max-height: 100%; /* Ensure the logo doesn't exceed the navbar height */
-    max-width: 150px; /* Optional: Set a max width to avoid excessive width */
-    margin: 0; /* Remove any margin around the logo */
+    height: 60px; /* Fixed height for the logo */
+    max-width: 100%;
+    object-fit: contain; /* Ensures the logo scales properly */
+    margin: 0; /* Ensure no margin affects the positioning */
 }
 
 .navbar ul {
@@ -38,33 +39,45 @@ h1 {
 }
 
 .navbar a {
-    color: black; /* Nav Bar Text: Black */
+    color: #333; /* Darker text color for better contrast */
     text-decoration: none;
-    padding: 10px 15px; /* Reduce padding for a smaller hover area */
+    padding: 10px 20px; /* Adjusted padding for better spacing */
     display: block;
     text-align: center;
-    transition: background-color 0.3s, padding 0.3s; /* Smooth transition for both background and padding */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
     font-size: 18px; /* Font size */
+    font-family: Arial, sans-serif; /* Font family */
 }
 
 .navbar a:hover {
-    background-color: #b3cce6; /* Lighter hover background color */
-    padding: 10px 15px; /* Consistent padding */
+    background-color: #004C99; /* Darker hover background color */
+    color: #ffffff; /* White text on hover */
+    border-radius: 5px; /* Rounded corners on hover */
 }
-
 
 .navbar li {
-    margin: 0 15px;
-    float: left;
+    margin: 0 10px; /* Space between list items */
 }
 
-/* Reset default margins and paddings */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background: #FFFFFF; /* Background: White */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
 }
+
+/*contact page*/
 
 .contact {
     max-width: 600px;
@@ -107,7 +120,7 @@ html, body {
 }
 
 button {
-    width: 100%;
+    width:100%;
     padding: 15px;
     border: none;
     border-radius: 5px;
@@ -121,58 +134,37 @@ button:hover {
     background: #003366; /* Darker blue on hover */
 }
 
-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
-}
+/* services page*/
 
-/* Services Page Styles */
 .services-content {
-    max-width: 1200px;
-    margin: 50px auto;
     padding: 20px;
-    background: #f7f7f7; /* Light background color for the content */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 30px;
 }
 
 .service {
-    background: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
     text-align: center;
-    width: calc(50% - 20px); /* Two columns layout */
-    max-width: 450px;
 }
 
 .service img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
 }
 
 .service h2 {
-    color: #004C99; /* Sub-heading color: Blue */
-    margin-bottom: 10px;
+    font-size: 1.5em;
+    margin: 10px 0;
 }
 
 .service p {
-    color: #333; /* Text color */
-    line-height: 1.6;
+    font-size: 1em;
+    color: #666;
 }
 
 @media (max-width: 600px) {
@@ -181,6 +173,8 @@ gallery {
         align-items: center;
     }
 }
+
+/* about us page */
 
 .about-container {
     max-width: 800px;
@@ -206,6 +200,63 @@ gallery {
 .about-content img {
     max-width: 300px;
     height: auto;
+    align-items: right;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the buttons horizontally */
+}
+
+.about-content button {
+    width: auto; /* Auto width */
+    height: auto;
+    padding: 10px 20px; /* Adjusted padding */
+    border: none;
+    border-radius: 5px;
+    background: #004C99; /* Button background color: Blue */
+    color: #FFFFFF;
+    font-size: 16px; /* Adjusted font size */
+    cursor: pointer;
+    margin-top: 10px; /* Space between buttons */
+}
+
+.about-content button:hover {
+    background: #003366; /* Button hover color */
+}
+
+/* contact us icons */
+
+.icons {
+    text-align: center;
+    font-size: 1.4vmax;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2%;
+    border: 1px solid black;
+    font-family: "Lemon Milk";
+    text-decoration: none;
+    color: black;
+}
+
+.icon-color {
+    color: black;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+
+.contact-icon {
+    transition: transform 0.3s;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+  
