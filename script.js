@@ -9,7 +9,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   var message = document.getElementById("message").value;
 
   // Send the form data to the API Gateway endpoint
-  fetch('arn:aws:apigateway:us-east-2::/apis/5srpkw75qa/routes/4txmo99', {
+  fetch('https://77mxu3qxi5.execute-api.us-east-2.amazonaws.com', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
