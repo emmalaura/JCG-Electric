@@ -14,7 +14,7 @@ function sendEmail(){
         Host : "smtp.elasticemail.com",
         Username : "jcgelectricservices@gmail.com",
         Password : "CCB5B17ECEB68F097832CE8C599C91ED2BE5",
-        To : 'jcg-electric.com',
+        To : 'jcgelectricservices@gmail.com',
         From : "you@isp.com",
         Subject : subject.value,
         Body : bodyMessage
