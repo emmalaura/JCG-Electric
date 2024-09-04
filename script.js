@@ -28,3 +28,12 @@ form.addEventListener("submit", (e) => {
 
     sendEmail();
 });
+
+
+// Add this JavaScript code to toggle the menu
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
