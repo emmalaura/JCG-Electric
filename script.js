@@ -1,23 +1,30 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
 
-        let name = document.getElementById('name').value;
-        let email = document.getElementById('email').value;
-        let phone = document.getElementById('phone').value;
-        let subject = document.getElementById('subject').value;
-        let message = document.getElementById('message').value;
+const form = document.querySelector("form");
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const message = document.getElementById("message");
 
-        // Sending email using SMTP.js
-        Email.send({
-            SecureToken: "704D0CB51F8964506A3AA1E3251F5D63C029E5C9EE94E27F235F564D58B8B413396BFCAD74406A48CCA6AD8012026E88",
-            To: 'jcgelectricservices@gmail.com',
-            From: email,
-            Subject: subject,
-            Body: `Name: ${name} <br/> Email: ${email} <br/> Phone: ${phone} <br/> Subject: ${subject} <br/> Message: ${message}`
-        }).then(
-            response => alert("Mail sent successfully")
-        ).catch(
-            error => alert("Failed to send email: " + error)
-        );
-    });
+function sendEmail(){
+    const bodyMessage = `Full Name: ${fullName.value} <br> Email: ${email.value}<br> Phone Number: ${phone.value} <br> Message: ${message.value}`;
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "jcgelectricservices@gmail.com",
+        Password : "CCB5B17ECEB68F097832CE8C599C91ED2BE5",
+        To : 'jcg-electric.com',
+        From : "you@isp.com",
+        Subject : subject.value,
+        Body : bodyMessage
+    }).then(
+      message => alert(message)
+    );
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    sendEmail();
+});
