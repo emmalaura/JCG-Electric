@@ -14,17 +14,18 @@ h1 {
 /* Navbar */
 .navbar {
     background: linear-gradient(to right, #ffffff, #f0f0f0); /* Subtle gradient background */
-    height: 80px; /* Fixed height for the navbar */
+    height: auto; /* Fixed height for the navbar */
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    padding: 0 20px; /* Padding for the navbar content */
+    padding: 10px 20px; /* Padding for the navbar content */
 }
 
 .navbar img {
     height: 60px; /* Fixed height for the logo */
     max-width: 100%;
+    margin-right: 20px; 
     object-fit: contain; /* Ensures the logo scales properly */
     margin: 0; /* Ensure no margin affects the positioning */
 }
@@ -34,7 +35,13 @@ h1 {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 15px;
+}
+
+.navbar li{
+    margin: 0;
 }
 
 .navbar a {
@@ -194,6 +201,7 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .button-container {
     display: flex;
     flex-direction: column;
@@ -305,6 +313,35 @@ button:hover {
 }
 
 /* Additional Media Queries */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+    .about-content p {
+        margin-right: 0;
+    }
+
+    .about-content img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+@media (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr); /* 4 photos in each row on desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media (max-width: 480px) {
     .navbar a {
         font-size: 0.9rem;
@@ -323,5 +360,64 @@ button:hover {
     .cta-button {
         padding: 8px 15px;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 10px;
+    }
+
+    .about-content p {
+        font-size: 0.9em;
+    }
+
+    .navbar img {
+        height: 40px;
+    }
+
+    .button-container button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .icons img {
+        width: 25px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the logo and links */
+        padding: 15px 0;
+    }
+    
+    .navbar ul {
+        flex-direction: column; /* Stack the links vertically */
+        width: 100%;
+        align-items: center; /* Center the links */
+        gap: 15px;
+    }
+    
+    .navbar a {
+        font-size: 1rem;
+        padding: 10px 0; /* Increase vertical padding for touch */
+        width: 100%;
+        text-align: center; /* Center the links */
+    }
+
+    .navbar img {
+        margin-bottom: 10px; /* Add space below the logo */
+    }
+
+    .button-container {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .button-container button {
+        width: 80%; /* Full width for mobile devices */
+        max-width: 400px;
     }
 }
