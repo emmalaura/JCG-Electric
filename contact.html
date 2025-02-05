@@ -21,7 +21,8 @@
 
     <section class="contact">
         <h2>Contact Us!</h2>
-        <form id="contact-form">
+        <form  action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
             <div class="input-field field">
                 <input type="text" name="name" placeholder="Full Name" id="name" class="item" autocomplete="off" required>
                 <div class="error-txt">Full Name can't be blank</div>
