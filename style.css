@@ -244,8 +244,8 @@ button:hover {
   }
   
   .icons a img {
-    width: 20px; 
-    height: 20px; 
+    width: 30px; 
+    height: 30px; 
     filter: grayscale(100%); 
     transition: filter 0.3s ease; 
   }
@@ -276,8 +276,8 @@ button:hover {
     }
     
     .icons a img {
-      width: 20px; /* Maintain smaller icon size */
-      height: 20px; /* Maintain smaller icon size */
+      width: 30px; /* Maintain smaller icon size */
+      height: 30px; /* Maintain smaller icon size */
       filter: grayscale(100%); /* Black and white */
       transition: filter 0.3s ease; /* Smooth transition */
     }
@@ -299,8 +299,8 @@ button:hover {
     }
   
     .icons a img {
-      width: 15px; /* Even smaller icon size for better fit on very small screens */
-      height: 15px; /* Even smaller icon size for better fit on very small screens */
+      width: 25px; /* Even smaller icon size for better fit on very small screens */
+      height: 25px; /* Even smaller icon size for better fit on very small screens */
     }
   }
   
